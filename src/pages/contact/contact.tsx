@@ -20,9 +20,9 @@ const Contact = () => {
     const handleSubmitted = useCallback(async (data: DataProps, FormikHelpers: ({
         resetForm: any; name: '', email: '', subject: '', message: ''
     })) => {
-        console.log('data', data)
-        const { status } = await axios.post("http://localhost:3000/dataUser", data);
-        console.log('status', status)
+
+        await axios.post("http://localhost:3000/dataUser", data);
+
 
         FormikHelpers.resetForm();
 

@@ -20,7 +20,6 @@ const TableView = () => {
         getData();
     }, []);
 
-    console.log(data)
     return (
         <div>
             <table className="table">
@@ -37,7 +36,7 @@ const TableView = () => {
                     {data?.map((item: DataProps, index: number) => {
                         return (
                             <tr key={index}>
-                                <th scope="row">{index+1}</th>
+                                <th scope="row">{index + 1}</th>
                                 <td>{item.name}</td>
                                 <td>{item.email}</td>
                                 <td>{item.subject}</td>
